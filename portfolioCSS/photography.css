@@ -1,0 +1,1115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+header {
+    height: 8vh;
+    width: 100vw;
+    background-color: #454547;
+    position: fixed;
+    margin-bottom: 1px;
+    position: fixed;
+    top: 0;             /* <-- CRITICAL: Ensures it sticks perfectly to the top */
+    left: 0;            /* <-- GOOD PRACTICE: Keeps it from shifting left */
+    z-index: 9999;      /* <-- CRITICAL: Brings the navbar to the very front layer */
+}
+
+nav {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    
+}
+
+#name-div {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#name-div h3 {
+    text-align: center;
+    color: white;
+    font-size: 4.25rem;
+    font-weight: 1000;
+    transition: transform 1s ease 0s;
+}
+#name-div h3:hover{
+    transform : scale(1.5);
+}
+
+
+#listings {
+    width: 80%;
+    height: 100%;
+}
+
+.main-list {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: 300;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+   
+
+}
+
+
+.main-list a {
+    color: white;
+    text-decoration: none;
+    display:inline-block;
+    transition: all 1s ease 0s;
+     
+}
+
+.main-list li a:hover {
+    color: #ea8ed2;
+    text-decoration: underline;
+    transform: scale(1.5);
+  
+}
+
+.main-list li a:active{
+    transform :  translateY(20px);
+}
+
+#home{
+  scroll-margin-top: 8vh;
+}
+
+.hom {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    /*background-color: black;*/
+    background-color: rgb(37, 35, 35);
+}
+
+#intro {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 12%;
+
+}
+
+#intro p {
+    font-size: 10rem;
+    color: #f882d9;
+    line-height: 2;
+
+}
+
+#intro h1 {
+
+    font-size: 10rem;
+    color: white;
+    line-height: 1.5;
+}
+
+#intro h1 span ,
+#intro h3 span {
+    color : #f882d9;
+  /*color: #FFBD39;*/  
+}
+
+#intro h3 {
+    font-size: 6.5rem;
+    color: white;
+    line-height: 2;
+}
+
+#intro p ,#intro h1 , #intro h3{
+animation : slide-in 1s ease 0s 1 alternate-reverse;
+}
+
+@keyframes slide-in{
+   0% {transform : translateX(0%) translateY(0%)}
+    100% {transform : translateX(-100%)  translateY(100%)} 
+}
+
+#video_div {
+    height: 100%;
+    width: 50%;
+   
+}
+
+video { 
+    height: 97%;
+    opacity: 0.53;
+    object-fit: cover;
+}
+
+#icon_button{
+    height: 150px;
+    width : 150px;
+    background-color: #eebb53;
+    border: 1px solid rgb(181, 229, 197);
+    border-radius: 50px;
+    position: absolute;
+    top: 49%;
+    right: 15%;
+    transform: translateY(-50%) scale(1);
+    transition : transform 1s ease-in 0s, opacity 1s ease-in 0s;
+    display : flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+  font-size: 8rem; /* Controls the size of the Google Icon directly */
+    color: #ffffff;
+
+}
+
+#about {
+    height: 90vh;
+    width: 100vw;
+    background-color: rgb(37, 35, 35);
+    scroll-margin-top: 8vh;
+    
+}
+
+
+#abtPic{
+  height: 65%;
+  width : 100%;
+   position: relative;
+}
+
+#abtPic h3 , #abtPic h2 {
+    color: rgb(255, 255, 255);
+    position :absolute ;
+    z-index: 2;
+    font-size: 4.5rem;
+}
+
+#abtPic h2{
+top: 10%;
+left : 10%;
+font-weight: 90;
+} 
+
+@-webkit-keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+.focus-in-expand {
+  -webkit-animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+          animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+#abtPic h3 {
+   bottom: 33%;
+   right : 15%;
+}
+
+.text-focus-in {
+	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1s both;
+	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1s both;
+}
+
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+
+#abtPic img{
+      height: 100%;
+     width : 100%;
+     object-fit: cover;
+     z-index: 1;
+    
+}
+
+#abt2{
+  height: 35%;
+  width : 50%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center ;
+  margin-top: 7rem;
+  margin-left: 9rem;
+}
+
+#abt2 p{
+ color: aliceblue;  
+  font-size: 3.5rem;
+  line-height: 1.75;
+}
+#abt2 p span ,
+.service_text p span {
+    color : #f882d9;
+}
+
+#services{
+    height : max-content;
+    width : 100vw;
+    scroll-margin-top: 8vh;
+}
+
+.service_item{
+    height: 800px;
+    width:100%;
+     background-color: rgb(37, 35, 35);
+     color: rgb(222, 240, 255); 
+    display: flex;
+    border-bottom: 1px solid grey;
+    
+}
+
+.service_text{
+    width : 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 15rem;
+}
+
+.service_text h3{
+    font-size : 4rem;
+    font-weight : 90;
+    margin-bottom : 2rem; 
+    line-height: 1.5;
+    color :#ffffff;
+}
+
+.focus-in-contract {
+	-webkit-animation: focus-in-contract 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: focus-in-contract 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes focus-in-contract {
+  0% {
+    letter-spacing: 1em;
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes focus-in-contract {
+  0% {
+    letter-spacing: 1em;
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+.service_text p{
+    font-size : 3.5rem;
+    line-height: 2;
+    color:rgb(220, 220, 220);
+ /*   margin : 0rem 6rem 0rem 6rem; */
+}
+
+
+.service_image{
+    width : 30%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 5000px;
+}
+
+.service_image img{
+   height : 90%;  
+   width :   50%;
+object-fit: cover;
+border: 1px solid rgb(37, 35, 35);
+border-radius: 20px;
+}
+
+.slide-bck-center {
+	-webkit-animation: slide-bck-center 0.45s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+	        animation: slide-bck-center 0.45s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
+@-webkit-keyframes slide-bck-center {
+  0% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+  }
+  100% {
+    -webkit-transform: translateZ(-400px);
+            transform: translateZ(-400px);
+  }
+}
+@keyframes slide-bck-center {
+  0% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+  }
+  100% {
+    -webkit-transform: translateZ(-400px);
+            transform: translateZ(-400px);
+  }
+}
+
+
+#work{
+  height:100vh;
+  width:100vw;
+  background-color: rgb(37, 35, 35);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-x: scroll;
+  object-fit: cover;
+
+}
+
+#work img{
+  height: 80%;
+   margin:0.35%;
+}
+
+
+#work img{
+    transition: all 0.5s ease 0s;
+}
+
+#work img:hover{
+   transform : scale(1.05);
+   border-radius: 50px;
+   height : 80%;
+ }
+
+#contact {
+  height:max-content;
+  width: 100vw;
+  scroll-margin-top: 8vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('../assets/images/contactPic1.jpeg'); /* <-- Update with your actual image path */
+background-position: center center;                          /* <-- Keeps the image centered */
+   background-repeat: no-repeat;                                   /* <-- Prevents the image from repeating like a tile */
+  background-size: cover; 
+  color:rgb(220, 220, 220);
+  display: flex;
+  flex-direction: column;
+
+}
+.contact_item1{
+  height: 50%;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 12rem 0rem 0rem 15rem;
+}
+
+
+
+
+
+.contact_item1 h2{
+  font-size: 6rem;
+  font-weight: 100;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+ .contact_item1 address{
+  line-height: 3;
+  font-size: 3.5rem;
+ }
+ .contact_item1  a{
+  color: #e39ed7;
+  text-decoration: none;
+ }
+
+  .contact_item1  a:hover{
+background-color: #2823a2;
+  }
+
+.contact_item1 p{
+  font-size: 4rem;
+  font-weight: 80;
+  line-height: 2;
+  margin: 4rem 0rem 1rem 0rem;
+}
+
+.contact_item2{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0rem 0rem 8rem 15rem;
+}
+
+
+  .contact_item2 label ,
+  .contact_item2 input ,
+  .contact_item2 select,
+  .contact_item2 textarea {
+  line-height: 2.67;
+  font-size: 3rem;
+ }
+ .contact_item2 input ,
+ .contact_item2 select 
+ {
+  height: 90px;
+  width:1000px;
+  padding-left: 1.5rem;
+ }
+
+ .contact_item2 input ,
+  .contact_item2 select ,
+    .contact_item2 textarea
+  {
+    border : 1px solid rgb(37, 35, 35);
+    border-radius: 20px;
+    background-color: rgb(206, 208, 209);
+   
+
+  }
+
+      .contact_item2 textarea
+  {
+      height: 500px;
+     width:1050px;
+    padding-left: 1.5rem;
+  }
+
+  #follow {
+    height: 100vh;
+    width: 100vw;
+    position: relative; /* Establishes a positioning context for the video */
+    display: flex;       /* Centers the content inside using Flexbox */
+    justify-content: center; 
+    align-items: center;
+    overflow: hidden;    /* Prevents any accidental scrollbars */
+    scroll-margin-top: 8vh;
+  }
+
+.background-video {
+    position: absolute; /* Pulls the video out of the normal layout flow */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* 'cover' handles aspect ratios better than 'fill' so it doesn't look stretched */
+     z-index:  -1; 
+     opacity: 0.89;     /* Keeps the video behind the text card */
+}
+
+.follow-me {
+    /* Removed the top/left percentages so Flexbox can do the centering */
+    height: 70%;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5%;
+    color: rgb(75, 70, 70);
+    background-image: url('../assets/images/backgroundPic3.png');
+    background-size: cover; /* Ensures your card's background image scales nicely */
+    opacity: 1;
+}
+
+
+
+.follow-me h4 {
+    font-size: 6rem;
+    margin-bottom: 4rem;
+    
+}
+
+.follow-me p {
+    font-size: 3.25rem;
+    margin : 2rem 0rem 3rem 0rem;
+    font-weight: 100;
+}
+
+.follow-me button {
+   margin-top: 4rem;
+    margin-bottom: 3rem;
+    height: 150px;
+    width: 650px;
+    font-size: 3rem;
+    font-weight: 540;
+    border-radius: 50px;
+    border-color: #dc7ecc;
+    background:  linear-gradient(115deg, #62cff4, #ff00ff);
+    
+}
+
+.follow-me button a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.follow-me img{
+    height : 8%;
+     width: 8%;
+     margin-bottom:1rem;
+}
+
+/*
+   RESPONSIVE MEDIA QUERIES
+
+/* 1. Laptops & Small Desktops (max-width: 1200px) */
+@media screen and (max-width: 1200px) {
+    #name-div h3 { font-size: 3rem; }
+    .main-list { font-size: 2rem; }
+    #intro p, #intro h1 { font-size: 7rem; }
+    #intro h3 { font-size: 4.5rem; }
+    #icon_button { height: 110px; width: 110px; right: 10%; }
+    .material-symbols-outlined { font-size: 5rem; }
+}
+
+/* 2. Tablets Landscape (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    #intro p, #intro h1 { font-size: 5.5rem; }
+    #intro h3 { font-size: 3.5rem; }
+    #intro { padding-left: 6%; }
+}
+
+/* 3. Tablets Portrait (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    header { height: auto; }
+    nav { flex-direction: column; align-items: center; padding: 10px 0; }
+    #name-div { width: 100%; margin-bottom: 10px; }
+    #listings { width: 100%; }
+    .main-list { font-size: 1.5rem; flex-wrap: wrap; justify-content: center; gap: 15px; }
+    
+    .hom { flex-direction: column-reverse; height: auto; min-height: 100vh; padding-top: 14vh; }
+    #intro { width: 100%; height: auto; padding: 40px 5%; }
+    #intro p, #intro h1 { font-size: 4rem; line-height: 1.4; }
+    #intro h3 { font-size: 2.5rem; line-height: 1.4; }
+    
+    #video_div { width: 100%; height: 45vh; position: relative; }
+    video { width: 100%; height: 100%; }
+    #icon_button { height: 90px; width: 90px; top: 50%; right: 50%; transform: translate(50%, -50%); }
+    .material-symbols-outlined { font-size: 4rem; }
+}
+
+/* 4. Mobile Phones (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .main-list { font-size: 1.1rem; gap: 8px; }
+    #name-div h3 { font-size: 2.2rem; }
+    #intro p, #intro h1 { font-size: 2.8rem; line-height: 1.3; }
+    #intro h3 { font-size: 1.8rem; line-height: 1.3; }
+    #video_div { height: 35vh; }
+    #icon_button { height: 75px; width: 75px; }
+    .material-symbols-outlined { font-size: 3rem; }
+}
+
+/* 
+   ABOUT SECTION RESPONSIVE MEDIA QUERIES
+
+1. Laptops & Small Desktops (max-width: 1200px) */
+@media screen and (max-width: 1200px) {
+    #abtPic h2, #abtPic h3 {
+        font-size: 3.5rem;
+    }
+    #abt2 {
+        width: 70%;       /* Expand text width as screen gets smaller */
+        margin-left: 5rem;
+        margin-top: 4rem;
+    }
+    #abt2 p {
+        font-size: 2.8rem;
+    }
+}
+
+/* 2. Tablets Landscape (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    #about {
+        height: auto;     /* Allow section to expand if text needs space */
+        min-height: 90vh;
+        padding-bottom: 40px;
+    }
+    #abtPic h2, #abtPic h3 {
+        font-size: 3rem;
+    }
+    #abt2 {
+        width: 80%;
+        margin-left: auto; /* Center the text container */
+        margin-right: auto;
+        margin-top: 3rem;
+    }
+    #abt2 p {
+        font-size: 2.4rem;
+    }
+}
+
+/* 3. Tablets Portrait (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    #about {
+        height: auto;
+        padding-bottom: 40px;
+    }
+    #abtPic {
+        height: 50vh;     /* Fix photo container height on portrait screens */
+    }
+    #abtPic h2, #abtPic h3 {
+        font-size: 2.2rem;
+        position: static;  /* Remove absolute positioning to stack cleanly */
+        text-align: center;
+        background-color: rgba(37, 35, 35, 0.7); /* Subtle dark backing so text remains readable over image */
+        width: 100%;
+        padding: 10px;
+    }
+    /* Let's layer the text nicely inside the box area */
+    #abtPic {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #abtPic img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+    #abt2 {
+        width: 90%;
+        height: auto;
+        margin: 3rem auto 0 auto;
+    }
+    #abt2 p {
+        font-size: 1.8rem;
+        line-height: 1.6;
+        text-align: center;
+    }
+}
+
+/* 4. Mobile Phones (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    #abtPic {
+        height: 40vh;
+    }
+    #abtPic h2 {
+        font-size: 1.6rem;
+    }
+    #abtPic h3 {
+        font-size: 1.6rem;
+    }
+    #abt2 {
+        width: 92%;
+        margin-top: 2rem;
+    }
+    #abt2 p {
+        font-size: 1.3rem;
+        line-height: 1.5;
+    }
+}
+
+/* 
+   SERVICES SECTION RESPONSIVE MEDIA QUERIES
+
+/* 1. Laptops & Small Desktops (max-width: 1200px) */
+@media screen and (max-width: 1200px) {
+    .service_item {
+        height: auto; /* Allow items to expand naturally instead of fixing at 800px */
+        padding: 60px 0;
+    }
+    .service_text {
+        padding-left: 6rem;
+        width: 65%;
+    }
+    .service_image {
+        width: 35%;
+    }
+    .service_text h3 {
+        font-size: 3.2rem;
+    }
+    .service_text p {
+        font-size: 2.5rem;
+    }
+    .service_image img {
+        width: 70%; /* Give the image slightly more room */
+    }
+}
+
+/* 2. Tablets Landscape (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    .service_text {
+        padding-left: 4rem;
+    }
+    .service_text h3 {
+        font-size: 2.8rem;
+    }
+    .service_text p {
+        font-size: 2.2rem;
+    }
+    .service_image img {
+        width: 80%;
+    }
+}
+
+/* 3. Tablets Portrait (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .service_item {
+        flex-direction: column; /* Stack text above the image */
+        height: auto;
+        padding: 40px 20px;
+        align-items: center;
+        text-align: center;
+    }
+    .service_text {
+        width: 100%;
+        padding-left: 0; /* Clear left padding since text is centered */
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    .service_text h3 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+    .service_text p {
+        font-size: 1.8rem;
+        line-height: 1.6;
+    }
+    .service_image {
+        width: 100%;
+    }
+    .service_image img {
+        width: 60%; /* Perfect width for vertical tablet screens */
+        height: auto;
+        aspect-ratio: 3 / 4; /* Maintains a beautiful portrait aspect ratio */
+    }
+}
+
+/* 4. Mobile Phones (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .service_item {
+        padding: 35px 15px;
+    }
+    .service_text h3 {
+        font-size: 2rem;
+    }
+    .service_text p {
+        font-size: 1.3rem;
+        line-height: 1.5;
+    }
+    .service_image img {
+        width: 85%; /* Make the image larger and clearer on phone viewports */
+    }
+}
+
+/* 
+   WORK SECTION RESPONSIVE MEDIA QUERIES
+
+/* 1. Laptops & Small Desktops (max-width: 1200px) */
+@media screen and (max-width: 1200px) {
+    #work {
+        height: 85vh; /* Scale down the container height slightly */
+    }
+    #work img {
+        height: 75%; /* Shrink images to prevent clipping */
+    }
+}
+
+/* 2. Tablets Landscape (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    #work {
+        height: 70vh;
+    }
+    #work img {
+        height: 70%;
+    }
+}
+
+/* 3. Tablets Portrait (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    #work {
+        height: auto; /* Allow section to grow vertically */
+        width: 100vw;
+        overflow-x: hidden; /* Turn off horizontal scrolling */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columns side-by-side */
+        gap: 15px;
+        padding: 40px 20px;
+    }
+    #work img {
+        height: auto;
+        width: 100%;
+        aspect-ratio: 1 / 1; /* Turn images into clean squares */
+        object-fit: cover;
+        margin: 0;
+    }
+    #work img:hover {
+        transform: scale(1.02); /* Tame hover scale slightly for touch screens */
+        border-radius: 20px;
+    }
+}
+
+/* 4. Mobile Phones (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    #work {
+        grid-template-columns: repeat(1, 1fr); /* Stack images in a single full-width column */
+        gap: 12px;
+        padding: 30px 15px;
+    }
+    #work img {
+        aspect-ratio: 3 / 4; /* Dynamic portrait layout for phone screens */
+    }
+    #work img:hover {
+        border-radius: 15px;
+    }
+}
+
+
+/* ==========================================================================
+   CONTACT SECTION RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+
+/* 1. Laptops & Small Desktops (max-width: 1200px) */
+@media screen and (max-width: 1200px) {
+    .contact_item1 {
+        margin: 8rem 0rem 0rem 6rem;
+    }
+    .contact_item2 {
+        margin: 0rem 0rem 6rem 6rem;
+    }
+    .contact_item1 h2 { font-size: 4.5rem; }
+    .contact_item1 address { font-size: 2.8rem; }
+    .contact_item1 p { font-size: 3rem; }
+
+    .contact_item2 input, 
+    .contact_item2 select {
+        width: 85vw; /* Switch to viewport width so it never overflows */
+    }
+    .contact_item2 textarea {
+        width: 88vw;
+        height: 400px;
+    }
+}
+
+/* 2. Tablets Landscape (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    .contact_item1 {
+        margin: 6rem 0rem 0rem 4rem;
+    }
+    .contact_item2 {
+        margin: 0rem 0rem 5rem 4rem;
+    }
+    .contact_item1 h2 { font-size: 3.8rem; }
+    .contact_item1 address { font-size: 2.2rem; }
+    .contact_item1 p { font-size: 2.4rem; }
+
+    .contact_item2 label,
+    .contact_item2 input,
+    .contact_item2 select,
+    .contact_item2 textarea {
+        font-size: 2.2rem;
+    }
+    .contact_item2 input, 
+    .contact_item2 select {
+        height: 70px;
+    }
+}
+
+/* 3. Tablets Portrait (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .contact_item1 {
+        margin: 5rem 0rem 0rem 0rem;
+        padding: 0 30px;
+        align-items: center;
+        text-align: center;
+    }
+    .contact_item2 {
+        margin: 4rem 0rem 5rem 0rem;
+        padding: 0 30px;
+        align-items: center;
+        width: 100%;
+    }
+    .contact_item1 h2 { font-size: 3rem; }
+    .contact_item1 address { font-size: 1.8rem; line-height: 2.5; }
+    .contact_item1 p { font-size: 2rem; margin: 2rem 0; }
+
+    .contact_item2 form {
+        width: 100%;
+    }
+    .contact_item2 input, 
+    .contact_item2 select,
+    .contact_item2 textarea {
+        width: 100%; /* Forms use 100% of the padded container */
+        font-size: 1.8rem;
+    }
+    .contact_item2 textarea {
+        height: 300px;
+    }
+}
+
+/* 4. Mobile Phones (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .contact_item1 {
+        padding: 0 20px;
+    }
+    .contact_item2 {
+        padding: 0 20px;
+    }
+    .contact_item1 h2 { font-size: 2.2rem; }
+    .contact_item1 address { font-size: 1.3rem; }
+    .contact_item1 p { font-size: 1.4rem; }
+
+    .contact_item2 label,
+    .contact_item2 input,
+    .contact_item2 select,
+    .contact_item2 textarea {
+        font-size: 1.3rem;
+    }
+    .contact_item2 input, 
+    .contact_item2 select {
+        height: 50px;
+    }
+    .contact_item2 textarea {
+        height: 200px;
+    }
+}
+/* ==========================================================================
+   FOLLOW ME SECTION RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+
+/* 1. Laptops & Small Desktops (max-width: 1200px) */
+@media screen and (max-width: 1200px) {
+    .follow-me {
+        width: 45%; /* Widen the card slightly so text has room */
+        height: 75%;
+    }
+    .follow-me h4 { font-size: 4.5rem; }
+    .follow-me p { font-size: 2.5rem; }
+    .follow-me button {
+        width: 80%; /* Shift button to percentage-based width */
+        height: 110px;
+        font-size: 2.5rem;
+    }
+}
+
+/* 2. Tablets Landscape (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    .follow-me {
+        width: 55%;
+    }
+    .follow-me h4 { font-size: 3.8rem; }
+    .follow-me p { font-size: 2.2rem; }
+    .follow-me button {
+        height: 90px;
+        font-size: 2.2rem;
+    }
+}
+
+/* 3. Tablets Portrait (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    #follow {
+        height: 80vh; /* Adjust viewport height slightly for portrait screens */
+    }
+    .follow-me {
+        width: 75%;
+        height: 70%;
+        padding: 20px; /* Add internal padding to keep content off the borders */
+        text-align: center;
+    }
+    .follow-me h4 { font-size: 3rem; margin-bottom: 2rem; }
+    .follow-me p { font-size: 1.8rem; margin: 1.5rem 0; }
+    .follow-me button {
+        width: 90%;
+        height: 80px;
+        font-size: 1.8rem;
+        margin-top: 2rem;
+    }
+}
+
+/* 4. Mobile Phones (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    #follow {
+        height: 100vh; /* Restore full viewport height to give elements breathing room */
+    }
+    .follow-me {
+        width: 90%;
+        height: 80%;
+    }
+    .follow-me h4 { font-size: 2.2rem; margin-bottom: 1.5rem; }
+    .follow-me p { font-size: 1.3rem; margin: 1rem 0; }
+    .follow-me button {
+        width: 95%;
+        height: 60px;
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    .follow-me img {
+        width: 15%; /* Scale up social icon slightly so it's readable on mobile */
+        height: auto;
+    }
+}
