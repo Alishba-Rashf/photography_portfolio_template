@@ -1,4 +1,4 @@
-Photography Portfolio Template
+Photography Portfolio Template:
 A modern, responsive, and minimal web template tailored for professional photographers to showcase their visual artistry. Built with clean, semantic web standards to ensure fast loading times and seamless cross-device compatibility.
 
 # Key Features
@@ -17,7 +17,11 @@ A modern, responsive, and minimal web template tailored for professional photogr
 
 
 ├── assets/             # Photography media assets (Images/Icons)
+
 ├── portfolioCSS/       # Core stylesheets and layout definitions
+
 ├── portfolioJs/        # Modular JavaScript functionality
+
 ├── index.html          # Main landing page & application entry point
+
 └── .gitignore          # Rules for untracked local environment files
